@@ -1,0 +1,41 @@
+nome_artigo,doi,tema_principal,subtemas,tipo,ano,instituicao
+Auditoria energética em unidades produtivas (artigo),10.9999/obs.1001,Eficiência Energética,Aproveitamento energético de resíduos industriais,Artigo,2022,UFBA
+Reciclagem de resíduos da mineração (artigo),10.9999/obs.1002,Exploração Mineral Sustentável,Extração mineral sustentável,Artigo,2025,UFBA
+Aproveitamento energético de resíduos agroindustriais (artigo),10.9999/obs.1003,"Energias Renováveis, Biomassa e Combustíveis Verdes",Aproveitamento energético de resíduos,Artigo,2024,SENAI CIMATEC
+Veículos elétricos leves para uso urbano (artigo),10.9999/obs.1004,Energias Renováveis nos Transportes,Mobilidade sustentável,Artigo,2022,UNEB
+Certificação de projetos de redução de emissões (artigo),10.9999/obs.1005,Mercado de Carbono,Mercado e créditos de carbono,Artigo,2023,UESC
+Motores de alta eficiência aplicados à indústria (artigo),10.9999/obs.1006,Eficiência Energética,Redução do consumo energético em processos produtivos,Artigo,2025,Embasa
+Mapeamento de minerais críticos na Bahia (artigo),10.9999/obs.1007,Exploração Mineral Sustentável,Extração mineral sustentável,Artigo,2021,Embasa
+Potencial eólico do litoral baiano (artigo),10.9999/obs.1008,"Energias Renováveis, Biomassa e Combustíveis Verdes",Aproveitamento energético de resíduos,Artigo,2022,UFRB
+Eletrificação da frota de transporte público (artigo),10.9999/obs.1009,Energias Renováveis nos Transportes,Infraestrutura de abastecimento e recarga,Artigo,2022,UNEB
+"Metodologias de mensuração, relato e verificação (artigo)",10.9999/obs.1010,Mercado de Carbono,Precificação de carbono,Artigo,2024,IFBA
+Aproveitamento de calor residual em processos fabris (artigo),10.9999/obs.1011,Eficiência Energética,Tecnologias e equipamentos de alta eficiência,Artigo,2025,UFBA
+Metais para baterias e a transição energética (artigo),10.9999/obs.1012,Exploração Mineral Sustentável,Prospecção e caracterização mineral,Artigo,2022,UNEB
+Aproveitamento energético de resíduos agroindustriais (resumo),10.9999/obs.1013,"Energias Renováveis, Biomassa e Combustíveis Verdes",Aproveitamento energético de resíduos,Resumo,2024,UEFS
+Eletrificação da frota de transporte público (resumo),10.9999/obs.1014,Energias Renováveis nos Transportes,Mobilidade sustentável,Resumo,2021,UNEB
+Créditos de carbono em projetos de energia limpa (resumo),10.9999/obs.1015,Mercado de Carbono,Precificação de carbono,Resumo,2024,UFRB
+Automação para redução de consumo elétrico (resumo),10.9999/obs.1016,Eficiência Energética,Tecnologias e equipamentos de alta eficiência,Resumo,2023,UNEB
+Reciclagem de resíduos da mineração (resumo),10.9999/obs.1017,Exploração Mineral Sustentável,Prospecção e caracterização mineral,Resumo,2023,UNEB
+Hidrogênio verde a partir de fontes renováveis (resumo),10.9999/obs.1018,"Energias Renováveis, Biomassa e Combustíveis Verdes",Biocombustíveis e combustíveis verdes,Resumo,2021,UFRB
+Infraestrutura de recarga para veículos elétricos (capítulo de livro),10.9999/obs.1019,Energias Renováveis nos Transportes,Infraestrutura de abastecimento e recarga,Capítulo de livro,2025,UEFS
+Inventário de gases de efeito estufa regional (capítulo de livro),10.9999/obs.1020,Mercado de Carbono,Metodologias de carbono,Capítulo de livro,2024,UFRB
+Sistemas de gestão de energia industrial (capítulo de livro),10.9999/obs.1021,Eficiência Energética,Redução do consumo energético em processos produtivos,Capítulo de livro,2022,SENAI CIMATEC
+Metais para baterias e a transição energética (capítulo de livro),10.9999/obs.1022,Exploração Mineral Sustentável,Metais prioritários para a transição energética,Capítulo de livro,2024,UFRB
+Hidrogênio verde a partir de fontes renováveis (livro),10.9999/obs.1023,"Energias Renováveis, Biomassa e Combustíveis Verdes",Energia eólica,Livro,2022,UFBA
+Mobilidade urbana de baixa emissão (livro),10.9999/obs.1024,Energias Renováveis nos Transportes,Veículos elétricos e de baixa emissão,Livro,2025,UFBA
+Monitoramento de emissões industriais (livro),10.9999/obs.1025,Mercado de Carbono,Metodologias de carbono,Livro,2023,UESC
+Motores de alta eficiência aplicados à indústria (relatório técnico),10.9999/obs.1026,Eficiência Energética,Eficiência energética industrial,Relatório técnico,2022,Embasa
+Mapeamento de minerais críticos na Bahia (relatório técnico),10.9999/obs.1027,Exploração Mineral Sustentável,Minerais críticos,Relatório técnico,2024,UFRB
+Cadeia produtiva de combustíveis verdes (relatório técnico),10.9999/obs.1028,"Energias Renováveis, Biomassa e Combustíveis Verdes",Energia eólica,Relatório técnico,2025,IFBA
+Eletrificação da frota de transporte público (relatório técnico),10.9999/obs.1029,Energias Renováveis nos Transportes,Mobilidade sustentável,Relatório técnico,2021,UFBA
+"Metodologias de mensuração, relato e verificação (relatório técnico)",10.9999/obs.1030,Mercado de Carbono,Metodologias de carbono,Relatório técnico,2021,UEFS
+Auditoria energética em unidades produtivas (programa de computador),10.9999/obs.1031,Eficiência Energética,Redução do consumo energético em processos produtivos,Programa de computador,2023,SENAI CIMATEC
+Mapeamento de minerais críticos na Bahia (programa de computador),10.9999/obs.1032,Exploração Mineral Sustentável,Metais prioritários para a transição energética,Programa de computador,2022,IFBA
+Integração de biomassa à matriz energética regional (programa de computador),10.9999/obs.1033,"Energias Renováveis, Biomassa e Combustíveis Verdes",Biomassa,Programa de computador,2021,IFBA
+Veículos elétricos leves para uso urbano (programa de computador),10.9999/obs.1034,Energias Renováveis nos Transportes,Mobilidade sustentável,Programa de computador,2021,UNEB
+Monitoramento de emissões industriais (depósito de patente),10.9999/obs.1035,Mercado de Carbono,Precificação de carbono,Depósito de patente,2024,UFBA
+Auditoria energética em unidades produtivas (depósito de patente),10.9999/obs.1036,Eficiência Energética,Aproveitamento energético de resíduos industriais,Depósito de patente,2025,SENAI CIMATEC
+Descarbonização de operações minerárias (depósito de patente),10.9999/obs.1037,Exploração Mineral Sustentável,Reciclagem e recuperação de minerais,Depósito de patente,2022,SENAI CIMATEC
+Produção de biocombustíveis a partir de biomassa residual (registro de marca),10.9999/obs.1038,"Energias Renováveis, Biomassa e Combustíveis Verdes",Energia eólica,Registro de marca,2021,UFBA
+Eletrificação da frota de transporte público (registro de marca),10.9999/obs.1039,Energias Renováveis nos Transportes,Mobilidade sustentável,Registro de marca,2024,UFBA
+Monitoramento de emissões industriais (registro de marca),10.9999/obs.1040,Mercado de Carbono,Precificação de carbono,Registro de marca,2025,UESC
