@@ -6,9 +6,15 @@ function Header() {
         <p className="text-sm font-medium" style={{ color: '#1B5FBF' }}>
           {nomeObservatorio}
         </p>
-        <h1 className="mt-1 text-2xl font-bold text-slate-900 sm:text-3xl">
-          Eixo Temático: {nomeEixo}
-        </h1>
+        <a
+          href="./"
+          aria-label="Voltar para a página inicial"
+          className="mt-1 inline-block rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >
+          <h1 className="text-2xl font-bold text-slate-900 transition-colors hover:text-blue-800 sm:text-3xl">
+            Eixo Temático: {nomeEixo}
+          </h1>
+        </a>
         <p className="mt-2 max-w-2xl text-sm text-slate-600">
           Distribuição das produções científicas e técnicas do eixo Energia,
           organizadas por tema e subtema.
