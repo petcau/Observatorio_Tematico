@@ -202,7 +202,7 @@ function FiltroGlobal({ taxo, producoes, filtros, aoMudar, totalFiltrado }) {
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
       <div className="min-w-0 flex-1">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-sm font-semibold text-slate-800">Filtros</h2>
+        <h2 className="text-sm font-semibold text-slate-800">Escolha um Tema, ou vários!</h2>
         <div className="flex flex-wrap items-center justify-end gap-3">
           <p className="text-sm text-slate-600">
             <span className="font-semibold tabular-nums text-slate-900">{F.numero(totalFiltrado)}</span> de{' '}
