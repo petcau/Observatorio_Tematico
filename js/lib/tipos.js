@@ -8,7 +8,10 @@ Obs.tipos = (function () {
     {
       categoria: 'Produção Acadêmica',
       tipos: [
-        { nome: 'Artigos', aliases: ['artigo', 'artigos', 'artigo cientifico', 'paper', 'papers'] },
+        {
+          nome: 'Artigos',
+          aliases: ['artigo', 'artigos', 'artigo cientifico', 'paper', 'papers', 'article'],
+        },
         { nome: 'Livros', aliases: ['livro', 'livros', 'book'] },
         {
           nome: 'Cap. Livros',
@@ -18,6 +21,7 @@ Obs.tipos = (function () {
             'cap. livro',
             'cap livro',
             'book chapter',
+            'book_chapter',
           ],
         },
         {
@@ -31,7 +35,13 @@ Obs.tipos = (function () {
       tipos: [
         {
           nome: 'Relatório Técnico',
-          aliases: ['relatorio tecnico', 'relatorio técnico', 'relatorio', 'technical report'],
+          aliases: [
+            'relatorio tecnico',
+            'relatorio técnico',
+            'relatorio',
+            'technical report',
+            'research_report',
+          ],
         },
         {
           nome: 'Depósito de Patente',
@@ -43,7 +53,7 @@ Obs.tipos = (function () {
         },
         {
           nome: 'Registro de Marca',
-          aliases: ['marca', 'registro de marca', 'registro marca', 'trademark'],
+          aliases: ['marca', 'registro de marca', 'registro marca', 'trademark', 'brand'],
         },
       ],
     },

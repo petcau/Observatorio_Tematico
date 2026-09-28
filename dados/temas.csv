@@ -3,6 +3,10 @@ Eficiência Energética,Redução do consumo energético em processos produtivos
 Eficiência Energética,Tecnologias e equipamentos de alta eficiência
 Eficiência Energética,Aproveitamento energético de resíduos industriais
 Eficiência Energética,Eficiência energética industrial
+Eficiência Energética,Geração distribuída
+Eficiência Energética,Autoprodução de energia
+Eficiência Energética,Cogeração
+Eficiência Energética,Eficiência energética nos transportes
 Exploração Mineral Sustentável,Minerais críticos
 Exploração Mineral Sustentável,Metais prioritários para a transição energética
 Exploração Mineral Sustentável,Extração mineral sustentável
@@ -12,15 +16,9 @@ Exploração Mineral Sustentável,Descarbonização da atividade mineral
 Exploração Mineral Sustentável,Redução e aproveitamento de resíduos e rejeitos
 Exploração Mineral Sustentável,Processamento mineral
 Exploração Mineral Sustentável,Terras raras
-"Energias Renováveis, Biomassa e Combustíveis Verdes",Biomassa
-"Energias Renováveis, Biomassa e Combustíveis Verdes",Biocombustíveis e combustíveis verdes
-"Energias Renováveis, Biomassa e Combustíveis Verdes",Aproveitamento energético de resíduos
-"Energias Renováveis, Biomassa e Combustíveis Verdes",Biorrefino e biorrefinarias
-"Energias Renováveis, Biomassa e Combustíveis Verdes",Hidrogênio renovável
-"Energias Renováveis, Biomassa e Combustíveis Verdes",Energia eólica
-Energias Renováveis nos Transportes,Mobilidade sustentável
-Energias Renováveis nos Transportes,Veículos elétricos e de baixa emissão
-Energias Renováveis nos Transportes,Infraestrutura de abastecimento e recarga
+Exploração Mineral Sustentável,Hidrometalurgia
+Exploração Mineral Sustentável,Separação e refino
+Exploração Mineral Sustentável,Beneficiamento
 Mercado de Carbono,Mercado e créditos de carbono
 Mercado de Carbono,Precificação de carbono
 Mercado de Carbono,Monitoramento de emissões
@@ -29,3 +27,24 @@ Mercado de Carbono,Soluções tecnológicas relacionadas ao mercado de carbono
 Mercado de Carbono,Inventários e redução de emissões
 Mercado de Carbono,Metodologias de carbono
 Mercado de Carbono,Certificação
+Mercado de Carbono,Rastreabilidade
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Biomassa
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Biocombustíveis e combustíveis verdes
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Aproveitamento energético de resíduos
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Biorrefino e biorrefinarias
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Hidrogênio renovável
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Energia eólica
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Biogás
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Biometano
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Bioeletricidade
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Energia solar
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Microrredes e geração renovável
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Energia hidráulica
+"Energias Renováveis, Biomassa e Combustíveis Verdes",Energia geotérmica
+Energias Renováveis nos Transportes,Mobilidade sustentável
+Energias Renováveis nos Transportes,Veículos elétricos e de baixa emissão
+Energias Renováveis nos Transportes,Infraestrutura de abastecimento e recarga
+Energias Renováveis nos Transportes,Combustíveis renováveis aplicados ao transporte
+Energias Renováveis nos Transportes,Componentes e tecnologias para veículos de baixa emissão
+Energias Renováveis nos Transportes,Baterias
+Energias Renováveis nos Transportes,Reciclagem de baterias de íon-lítio

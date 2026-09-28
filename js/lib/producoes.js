@@ -6,14 +6,47 @@ window.Obs = window.Obs || {};
 
 Obs.producoes = (function () {
   const ALIASES = {
-    titulo: ['titulo', 'título', 'nome_artigo', 'nome do artigo'],
+    titulo: ['titulo', 'título', 'nome_artigo', 'nome do artigo', 'nome_producao', 'nome da produção'],
     doi: ['doi'],
     tema: ['tema', 'tema_principal', 'tema principal'],
     subtemas: ['subtema', 'subtemas'],
     ano: ['ano', 'periodo', 'período'],
-    instituicao: ['instituicao', 'instituição', 'autor', 'autores', 'instituicao/autor'],
+    instituicao: [
+      'instituicao',
+      'instituição',
+      'autor',
+      'autores',
+      'instituicao/autor',
+      'nome_instituicao',
+    ],
     tipo: ['tipo', 'tipo_producao', 'tipo de produção', 'tipo de producao', 'categoria'],
+    pesquisador: ['pesquisador', 'nome_pesquisador', 'nome do pesquisador'],
+    idPesquisador: ['id_pesquisador'],
+    classificacaoPesquisador: [
+      'classificacao_pesquisador',
+      'classificação_pesquisador',
+      'classificacao do pesquisador',
+    ],
+    qualis: ['qualis'],
+    jcr: ['jcr'],
+    hIndex: ['h_index', 'h-index', 'hindex'],
+    i10Index: ['i10_index', 'i10-index', 'i10index'],
+    modalidade: ['modality_name', 'modalidade'],
+    imagemPesquisador: ['imagem_pesquisador', 'foto_pesquisador'],
+    codigoModalidade: ['modality_code', 'codigo_modalidade'],
+    nivelModalidade: ['category_level_code', 'nivel_modalidade'],
   };
+
+  // Corrige texto UTF-8 que foi gravado como Latin-1 (ex.: "ExtensÃ£o" → "Extensão").
+  // Só age quando a sequência decodifica de forma válida; caso contrário mantém o original.
+  function repararCodificacao(texto) {
+    if (!/[ÃÂ]/.test(texto)) return texto;
+    try {
+      return decodeURIComponent(escape(texto));
+    } catch (e) {
+      return texto;
+    }
+  }
 
   function normalizarNomeColuna(coluna) {
     return coluna
@@ -43,18 +76,23 @@ Obs.producoes = (function () {
       .filter(Boolean);
   }
 
+  function campoOpcional(linha, mapa, campo) {
+    const valor = mapa[campo] ? (linha[mapa[campo]] || '').trim() : '';
+    return valor ? repararCodificacao(valor) : undefined;
+  }
+
+  function numeroOpcional(linha, mapa, campo) {
+    const valor = campoOpcional(linha, mapa, campo);
+    if (valor === undefined) return undefined;
+    const numero = Number(valor.replace(',', '.'));
+    return Number.isFinite(numero) ? numero : undefined;
+  }
+
   function carregarLinhas(linhas, taxo) {
     const producoes = [];
     const invalidas = [];
     if (linhas.length === 0) {
-      return {
-        producoes,
-        invalidas,
-        colunasIgnoradas: [],
-        temAno: false,
-        temInstituicao: false,
-        temTipo: false,
-      };
+      return { producoes, invalidas, colunasIgnoradas: [] };
     }
 
     const { mapa, ignoradas } = mapearColunas(Object.keys(linhas[0]));
@@ -91,32 +129,33 @@ Obs.producoes = (function () {
 
       producoes.push({
         titulo: tituloBruto,
-        doi: mapa.doi ? (linha[mapa.doi] || '').trim() || undefined : undefined,
+        doi: campoOpcional(linha, mapa, 'doi'),
         tema: temaCanonico,
         subtemas,
-        ano: mapa.ano ? (linha[mapa.ano] || '').trim() || undefined : undefined,
-        instituicao: mapa.instituicao ? (linha[mapa.instituicao] || '').trim() || undefined : undefined,
+        ano: campoOpcional(linha, mapa, 'ano'),
+        instituicao: campoOpcional(linha, mapa, 'instituicao'),
         tipo: mapa.tipo ? Obs.tipos.resolverTipo(linha[mapa.tipo]) || undefined : undefined,
+        pesquisador: campoOpcional(linha, mapa, 'pesquisador'),
+        idPesquisador: campoOpcional(linha, mapa, 'idPesquisador'),
+        classificacaoPesquisador: campoOpcional(linha, mapa, 'classificacaoPesquisador'),
+        qualis: campoOpcional(linha, mapa, 'qualis'),
+        jcr: numeroOpcional(linha, mapa, 'jcr'),
+        hIndex: numeroOpcional(linha, mapa, 'hIndex'),
+        i10Index: numeroOpcional(linha, mapa, 'i10Index'),
+        modalidade: campoOpcional(linha, mapa, 'modalidade'),
+        imagemPesquisador: campoOpcional(linha, mapa, 'imagemPesquisador'),
+        codigoModalidade: campoOpcional(linha, mapa, 'codigoModalidade'),
+        nivelModalidade: campoOpcional(linha, mapa, 'nivelModalidade'),
       });
     });
 
-    return {
-      producoes,
-      invalidas,
-      colunasIgnoradas: ignoradas,
-      temAno: Boolean(mapa.ano),
-      temInstituicao: Boolean(mapa.instituicao),
-      temTipo: Boolean(mapa.tipo),
-    };
+    return { producoes, invalidas, colunasIgnoradas: ignoradas };
   }
 
   async function carregarTudo(caminhos, taxo) {
     const producoes = [];
     const invalidas = [];
     const colunasIgnoradas = new Set();
-    let temAno = false;
-    let temInstituicao = false;
-    let temTipo = false;
 
     for (const caminho of caminhos) {
       const texto = await Obs.csv.buscarTexto(caminho);
@@ -125,9 +164,6 @@ Obs.producoes = (function () {
       producoes.push(...resultado.producoes);
       invalidas.push(...resultado.invalidas);
       resultado.colunasIgnoradas.forEach((c) => colunasIgnoradas.add(c));
-      temAno = temAno || resultado.temAno;
-      temInstituicao = temInstituicao || resultado.temInstituicao;
-      temTipo = temTipo || resultado.temTipo;
     }
 
     if (invalidas.length > 0) {
@@ -137,12 +173,7 @@ Obs.producoes = (function () {
       );
     }
 
-    return {
-      producoes,
-      invalidas,
-      colunasIgnoradas: [...colunasIgnoradas],
-      camposDisponiveis: { ano: temAno, instituicao: temInstituicao, tipo: temTipo },
-    };
+    return { producoes, invalidas, colunasIgnoradas: [...colunasIgnoradas] };
   }
 
   return { carregarTudo };

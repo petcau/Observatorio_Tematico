@@ -2,7 +2,7 @@ function Header() {
   const { nomeObservatorio, nomeEixo } = OBS_CONFIG;
   return (
     <header className="border-b border-slate-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
+      <div className="mx-auto max-w-[90rem] px-4 py-6 sm:px-6">
         <p className="text-sm font-medium" style={{ color: '#1B5FBF' }}>
           {nomeObservatorio}
         </p>
