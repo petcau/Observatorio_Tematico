@@ -1,12 +1,13 @@
 const SECOES = [
   { chave: 'geral', numero: '1', rotulo: 'Visão geral', componente: SecaoVisaoGeral },
   { chave: 'institucional', numero: '2', rotulo: 'Instituições', componente: SecaoInstitucional },
-  { chave: 'pesquisadores', numero: '3', rotulo: 'Pesquisadores', componente: SecaoPesquisadores },
-  { chave: 'producoes', numero: '4', rotulo: 'Produções', componente: SecaoProducoes },
+  { chave: 'localizacao', numero: '3', rotulo: 'Localização', componente: SecaoLocalizacao },
+  { chave: 'pesquisadores', numero: '4', rotulo: 'Pesquisadores', componente: SecaoPesquisadores },
+  { chave: 'producoes', numero: '5', rotulo: 'Produções', componente: SecaoProducoes },
   // Só aparece no menu depois que um pesquisador é escolhido; não usa os filtros gerais.
   {
     chave: 'pesquisador',
-    numero: '5',
+    numero: '6',
     rotulo: 'Dados Pesquisador',
     componente: SecaoDadosPesquisador,
     precisaPesquisador: true,
@@ -93,18 +94,17 @@ function App() {
   function selecionarSecao(chave) {
     window.location.hash = chave;
     setSecaoAtiva(chave);
+    setRolarParaPainel(true);
   }
 
   function abrirPesquisador(id) {
     setPesquisadorSelecionado(id);
     selecionarSecao('pesquisador');
-    setRolarParaPainel(true);
   }
 
   function abrirComFiltro(secao, campo, valor, teste, extras = {}) {
     setFiltroPainel({ secao, campo, valor, teste, ...extras });
     selecionarSecao(secao);
-    setRolarParaPainel(true);
   }
 
   // Depois que o painel novo renderiza, leva a tela até o título dele.

@@ -1,7 +1,12 @@
 // Lista das produções filtradas, com ordenação por coluna e paginação.
 // `filtroPainel` ({ campo, valor }) restringe só esta lista — vem do clique num
 // gráfico de produções da Visão geral.
-function SecaoProducoes({ producoes: todasFiltradas, filtroPainel, aoLimparFiltroPainel }) {
+function SecaoProducoes({
+  producoes: todasFiltradas,
+  filtroPainel,
+  aoLimparFiltroPainel,
+  aoAbrirPesquisador,
+}) {
   const { useState, useMemo, useEffect } = React;
   const producoes = useMemo(
     () => aplicarFiltroPainel(todasFiltradas, filtroPainel),
@@ -134,7 +139,20 @@ function SecaoProducoes({ producoes: todasFiltradas, filtroPainel, aoLimparFiltr
                       )}
                     </td>
                     <td className="px-3 py-2 text-slate-600">{p.tipo || '—'}</td>
-                    <td className="px-3 py-2 text-slate-700">{p.pesquisador || '—'}</td>
+                    <td className="px-3 py-2 text-slate-700">
+                      {p.pesquisador ? (
+                        <button
+                          type="button"
+                          onClick={() => aoAbrirPesquisador(p.idPesquisador || p.pesquisador)}
+                          title="Ver os dados deste pesquisador"
+                          className="text-left text-blue-700 hover:underline"
+                        >
+                          {p.pesquisador}
+                        </button>
+                      ) : (
+                        '—'
+                      )}
+                    </td>
                     <td className="px-3 py-2 text-slate-600">{p.instituicao || '—'}</td>
                     <td className="px-3 py-2 text-slate-600">{p.qualis || '—'}</td>
                   </tr>
