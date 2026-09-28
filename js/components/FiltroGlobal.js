@@ -198,7 +198,7 @@ function FiltroGlobal({ taxo, producoes, filtros, aoMudar, totalFiltrado }) {
   const temFiltro = temFiltroAtivo(filtros);
 
   return (
-    <section aria-label="Filtros" className="rounded-xl border border-blue-100 bg-[#e2ebf7] p-4 sm:px-6">
+    <section aria-label="Filtros" className="rounded-xl border border-blue-100 bg-[#bfdbfe] p-4 sm:px-6">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
       <div className="min-w-0 flex-1">
       <div className="flex flex-wrap items-center justify-between gap-2">
