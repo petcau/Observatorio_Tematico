@@ -11,6 +11,7 @@ const ROTULOS_FILTRO_PAINEL = {
   jcr: 'JCR',
   tema: 'Tema',
   subtema: 'Subtema',
+  cidadePesquisador: 'Município',
 };
 
 function aplicarFiltroPainel(producoes, filtro) {

@@ -33,6 +33,7 @@ Obs.producoes = (function () {
     i10Index: ['i10_index', 'i10-index', 'i10index'],
     modalidade: ['modality_name', 'modalidade'],
     imagemPesquisador: ['imagem_pesquisador', 'foto_pesquisador'],
+    cidadePesquisador: ['cidade_pesquisador', 'cidade do pesquisador', 'cidade'],
     codigoModalidade: ['modality_code', 'codigo_modalidade'],
     nivelModalidade: ['category_level_code', 'nivel_modalidade'],
   };
@@ -144,6 +145,7 @@ Obs.producoes = (function () {
         i10Index: numeroOpcional(linha, mapa, 'i10Index'),
         modalidade: campoOpcional(linha, mapa, 'modalidade'),
         imagemPesquisador: campoOpcional(linha, mapa, 'imagemPesquisador'),
+        cidadePesquisador: campoOpcional(linha, mapa, 'cidadePesquisador'),
         codigoModalidade: campoOpcional(linha, mapa, 'codigoModalidade'),
         nivelModalidade: campoOpcional(linha, mapa, 'nivelModalidade'),
       });

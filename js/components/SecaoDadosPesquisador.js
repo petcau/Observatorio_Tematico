@@ -75,6 +75,7 @@ function SecaoDadosPesquisador({
     return {
       nome: ref.pesquisador,
       instituicao: ref.instituicao,
+      cidade: ref.cidadePesquisador,
       classificacao: ref.classificacaoPesquisador,
       modalidade: ref.modalidade,
       hIndex: ref.hIndex,
@@ -129,6 +130,7 @@ function SecaoDadosPesquisador({
 
   const ficha = [
     { rotulo: 'Instituição', valor: dados.instituicao },
+    { rotulo: 'Município', valor: dados.cidade },
     { rotulo: 'Bolsa de produtividade', valor: dados.modalidade },
     { rotulo: 'Classificação', valor: dados.classificacao },
     { rotulo: 'h-index', valor: dados.hIndex !== undefined ? F.numero(dados.hIndex) : undefined },

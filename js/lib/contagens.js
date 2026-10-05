@@ -58,6 +58,7 @@ Obs.contagens = (function () {
           id,
           nome: p.pesquisador,
           instituicao: p.instituicao,
+          cidade: p.cidadePesquisador,
           modalidade: p.modalidade,
           total: 0,
         });
